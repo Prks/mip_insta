@@ -1,4 +1,6 @@
 {
-  "name": "ionic_insta",
-  "app_id": ""
+  "name": "insta_mip",
+  "app_id": "",
+"gulpStartupTasks": ["sass", "watch"]
 }
+

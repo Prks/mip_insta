@@ -20,22 +20,22 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('tabsController.youCanSearchHere', {
+  .state('tabsController.search', {
     url: '/page2',
     views: {
       'tab2': {
-        templateUrl: 'templates/youCanSearchHere.html',
-        controller: 'youCanSearchHereCtrl'
+        templateUrl: 'templates/search.html',
+        controller: 'searchCtrl'
       }
     }
   })
 
-  .state('tabsController.postSomethingNew', {
+  .state('tabsController.post', {
     url: '/page3',
     views: {
       'tab3': {
-        templateUrl: 'templates/postSomethingNew.html',
-        controller: 'postSomethingNewCtrl'
+        templateUrl: 'templates/post.html',
+        controller: 'postCtrl'
       }
     }
   })
@@ -46,20 +46,14 @@ angular.module('app.routes', [])
     abstract:true
   })
 
-  .state('tabsController.profile', {
-    url: '/page5',
+  .state('tabsController.mikko_', {
+    url: '/page4',
     views: {
       'tab4': {
-        templateUrl: 'templates/profile.html',
-        controller: 'profileCtrl'
+        templateUrl: 'templates/mikko_.html',
+        controller: 'mikko_Ctrl'
       }
     }
-  })
-
-  .state('yourProfile', {
-    url: '/page4',
-    templateUrl: 'templates/yourProfile.html',
-    controller: 'yourProfileCtrl'
   })
 
 $urlRouterProvider.otherwise('/page1/page1')

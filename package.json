@@ -1,7 +1,7 @@
 {
-  "name": "ionic_insta",
+  "name": "insta_mip",
   "version": "1.1.1",
-  "description": "ionic_insta: An Ionic project",
+  "description": "insta_mip: An Ionic project",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
