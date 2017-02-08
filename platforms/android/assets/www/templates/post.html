@@ -3,12 +3,12 @@
       </label>
     </form>
   </ion-content>
-   <ion-footer-bar ng-controller="exampleController" class="bar button-bar-footer" style="height: auto;">
+   <ion-footer-bar ng-controller="cameraController" class="bar button-bar-footer" style="height: auto;">
      <div class="button-bar" style="position: absolute;bottom: 0;" >
      <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}">
-    <img ng-show="imgURI === undefined" ng-src="http://placehold.it/300x300"><br>
+     <button style="min-width: 50%;border-radius: 0px;"  class="button button-stable">Gallery</button>
        <button style="min-width: 50%;border-radius: 0px;" class="button button-stable" ng-click="takePicture()">Camera</button>
-       <button style="min-width: 50%;border-radius: 0px;"  class="button button-stable">Gallery</button>
+       
     </div>
   </ion-footer-bar>
 </ion-view>

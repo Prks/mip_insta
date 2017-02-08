@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-var exampleApp =angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives','app.services', 'ngCordova'])
+var pictureApp =angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives','app.services', 'ngCordova'])
 
 .config(function($ionicConfigProvider, $sceDelegateProvider){
   
@@ -82,7 +82,7 @@ var exampleApp =angular.module('app', ['ionic', 'app.controllers', 'app.routes',
     }
   };
 });
-exampleApp.controller("exampleController", function($scope, $cordovaCamera){
+pictureApp.controller("cameraController", function($scope, $cordovaCamera){
 
   $scope.takePicture = function() {
         var options = { 

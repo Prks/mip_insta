@@ -104,3 +104,47 @@ pictureApp.controller("cameraController", function($scope, $cordovaCamera){
         });
     }
 });
+
+  var like_state_for_one = false;
+  var like_state_for_two = false;
+function addLikesToOne(){
+  if (like_state_for_one == false){
+  var like = document.getElementById('instagram-button7');
+  //console.log(like_counts).innerHTML;
+  var total_likes = Number(like.innerHTML);
+  var like_counts = total_likes + 1;
+  like.innerHTML = like_counts;
+
+  like_state_for_one = true;
+  console.log(like_state_for_one);
+}
+  else {
+    var like = document.getElementById('instagram-button7');
+    var total_likes = Number(like.innerHTML);
+    var like_counts = total_likes - 1;
+    like.innerHTML = like_counts; 
+    like_state_for_one= false;
+    console.log(like_state_for_one);
+  }
+}
+
+function addLikesToTwo(){
+  if (like_state_for_two == false){
+  var like = document.getElementById('instagram-button8');
+  //console.log(like_counts).innerHTML;
+  var total_likes = Number(like.innerHTML);
+  var like_counts = total_likes + 1;
+  like.innerHTML = like_counts;
+
+  like_state_for_two = true;
+  console.log(like_state_for_two);
+}
+  else {
+    var like = document.getElementById('instagram-button8');
+    var total_likes = Number(like.innerHTML);
+    var like_counts = total_likes - 1;
+    like.innerHTML = like_counts; 
+    like_state_for_two= false;
+    console.log(like_state_for_two);
+  }
+}
