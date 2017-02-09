@@ -1,10 +1,9 @@
 <ion-view title="Comments" id="page7">
   <ion-nav-buttons side="left" class="has-header">
-    <button class="button button-icon icon ion-android-arrow-back"></button>
   </ion-nav-buttons>
   <ion-content padding="true" class="has-header">
     <ion-list id="comments-list3">
-      <ion-item class="item-avatar item-icon-right" id="comments-list-item5" ui-sref="tabsController.instagram">
+      <ion-item class="item-avatar item-icon-right" id="comments-list-item5" >
         <img src="img/aZoZ1Os8SIoC6QRv2mhs_john.jpg">
         <h2>John_Doe</h2>
         <p>7h</p>
@@ -17,8 +16,8 @@
         <i class="icon ion-ios-heart-outline icon-accessory"></i>
       </ion-item>
       <label class="item item-input" id="comments-textarea1">
-        <span class="input-label"></span><textarea placeholder="Add a comment"></textarea></label>
+        <span class="input-label"></span><textarea placeholder="Add a comment" id="commentId"></textarea></label>
     </ion-list>
-    <button id="comments-button11" class="button button-light  button-block icon ion-checkmark-round"></button>
+    <button id="comments-button11" class="button button-light  button-block icon ion-checkmark-round" onclick="postComment()" ui-sref="tabsController.instagram"></button>
   </ion-content>
 </ion-view>

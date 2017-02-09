@@ -168,3 +168,13 @@ function addLikesToTwo(){
     console.log(like_state_for_two);
   }
 }
+
+function postComment(){
+  var comment = document.getElementById('commentId');
+  var commentContent = comment.value;
+  console.log(commentContent);
+  var existingComment = document.getElementById('commented');
+  var existingCommentContent = existingComment.innerHTML;
+  console.log(existingCommentContent);
+  existingComment.innerHTML = existingCommentContent + '<br>' + commentContent;
+}

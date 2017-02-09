@@ -56,6 +56,17 @@ angular.module('app.routes', [])
     }
   })
 
+ .state('tabsController.comments', {
+    url: '/page7',
+    views: {
+      'tab1': {
+        templateUrl: 'templates/comments.html',
+        controller: 'commentsCtrl'
+      }
+    }
+  })
+
+
 $urlRouterProvider.otherwise('/page1/page1')
 
   
