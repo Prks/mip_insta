@@ -27,6 +27,12 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.ionicframework.instamip303452"
+        },
+        "cordova-plugin-image-picker": {
+            "PACKAGE_NAME": "com.ionicframework.instamip303452"
+        },
+        "com-badrit-base64": {
+            "PACKAGE_NAME": "com.ionicframework.instamip303452"
         }
     },
     "dependent_plugins": {

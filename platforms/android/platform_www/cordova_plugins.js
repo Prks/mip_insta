@@ -64,6 +64,22 @@ module.exports = [
             "cordova.plugins.Keyboard"
         ],
         "runs": true
+    },
+    {
+        "id": "cordova-plugin-image-picker.ImagePicker",
+        "file": "plugins/cordova-plugin-image-picker/www/imagepicker.js",
+        "pluginId": "cordova-plugin-image-picker",
+        "clobbers": [
+            "plugins.imagePicker"
+        ]
+    },
+    {
+        "id": "com-badrit-base64.Base64",
+        "file": "plugins/com-badrit-base64/www/Base64.js",
+        "pluginId": "com-badrit-base64",
+        "clobbers": [
+            "navigator.Base64"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -76,7 +92,9 @@ module.exports.metadata =
     "cordova-plugin-splashscreen": "4.0.1",
     "cordova-plugin-statusbar": "2.2.1",
     "cordova-plugin-whitelist": "1.3.1",
-    "ionic-plugin-keyboard": "2.2.1"
+    "ionic-plugin-keyboard": "2.2.1",
+    "cordova-plugin-image-picker": "1.1.1",
+    "com-badrit-base64": "0.2.0"
 };
 // BOTTOM OF METADATA
 });

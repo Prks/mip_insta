@@ -6,7 +6,7 @@
    <ion-footer-bar ng-controller="cameraController" class="bar button-bar-footer" style="height: auto;">
      <div class="button-bar" style="position: absolute;bottom: 0;" >
      <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}">
-     <button style="min-width: 50%;border-radius: 0px;"  class="button button-stable">Gallery</button>
+     <button style="min-width: 50%;border-radius: 0px;"  class="button button-stable" ng-click="getPicture()">Gallery</button>
        <button style="min-width: 50%;border-radius: 0px;" class="button button-stable" ng-click="takePicture()">Camera</button>
        
     </div>

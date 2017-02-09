@@ -82,7 +82,7 @@ var pictureApp =angular.module('app', ['ionic', 'app.controllers', 'app.routes',
     }
   };
 });
-pictureApp.controller("cameraController", function($scope, $cordovaCamera){
+pictureApp.controller("cameraController", function($scope, $cordovaCamera, $cordovaImagePicker){
 
   $scope.takePicture = function() {
         var options = { 
@@ -103,4 +103,68 @@ pictureApp.controller("cameraController", function($scope, $cordovaCamera){
             // An error occured. Show a message to the user
         });
     }
+    $scope.getPicture = function() { 
+      
+        // Image picker will load images according to these settings
+    var options = {
+        maximumImagesCount: 1, // Max number of selected images, I'm using only one for this example
+        width: 800,
+        height: 800,
+        quality: 80      
+    };
+ 
+    $cordovaImagePicker.getPictures(options).then(function (results) {
+                // Loop through acquired images
+        for (var i = 0; i < results.length; i++) {
+             $scope.imgURI = results[i];   // Print image URI
+        }
+    }, function(error) {
+        console.log('Error: ' + JSON.stringify(error));    // In case of error
+    });
+}
 });
+
+
+  var like_state_for_one = false;
+  var like_state_for_two = false;
+function addLikesToOne(){
+  if (like_state_for_one == false){
+  var like = document.getElementById('instagram-button7');
+  //console.log(like_counts).innerHTML;
+  var total_likes = Number(like.innerHTML);
+  var like_counts = total_likes + 1;
+  like.innerHTML = like_counts;
+
+  like_state_for_one = true;
+  console.log(like_state_for_one);
+}
+  else {
+    var like = document.getElementById('instagram-button7');
+    var total_likes = Number(like.innerHTML);
+    var like_counts = total_likes - 1;
+    like.innerHTML = like_counts; 
+    like_state_for_one= false;
+    console.log(like_state_for_one);
+  }
+}
+
+function addLikesToTwo(){
+  if (like_state_for_two == false){
+  var like = document.getElementById('instagram-button8');
+  //console.log(like_counts).innerHTML;
+  var total_likes = Number(like.innerHTML);
+  var like_counts = total_likes + 1;
+  like.innerHTML = like_counts;
+
+  like_state_for_two = true;
+  console.log(like_state_for_two);
+}
+  else {
+    var like = document.getElementById('instagram-button8');
+    var total_likes = Number(like.innerHTML);
+    var like_counts = total_likes - 1;
+    like.innerHTML = like_counts; 
+    like_state_for_two= false;
+    console.log(like_state_for_two);
+  }
+}
